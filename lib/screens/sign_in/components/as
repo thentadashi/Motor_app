@@ -1,0 +1,161 @@
+To implement the provided code in your `SignForm` widget, you can follow these steps. It looks like you've made most of the changes already, but I'll summarize the important parts.
+
+1. **Session Management**: You mentioned earlier that you wanted to use `showSnackBar` for error handling instead of `catch`. I see that you've added a `showErrorSnackBar` method for displaying errors.
+
+2. **Login Function**: The `login` function should be updated as follows. This function should display a snackbar when the login fails, and if the login is successful, it should set the user's session data using your session manager.
+
+   ```dart
+   Future<void> login(String email, String password) async {
+     final response = await http.post(
+       Uri.parse('http://192.168.100.175:81/flutter_apps/Pharma_app/login/login_script.php'),
+       body: {
+         'email': email,
+         'password': password,
+       },
+     );
+
+     if (response.statusCode == 200) {
+       final Map<String, dynamic> data = json.decode(response.body);
+       if (data["success"]) {
+         // Login was successful, set the user's session
+         SessionManager sessionManager = SessionManager();
+         await sessionManager.setLoggedIn(true);
+         await sessionManager.setUserId(data["user_id"]);
+
+         // Navigate to another screen
+         Navigator.pushNamed(context, LoginSuccessScreen.routeName);
+       } else {
+         // Display an error snackbar for login failure
+         showErrorSnackBar("Login failed: ${data["message"]}");
+       }
+     } else {
+       // Display an error snackbar for the server request failure
+       showErrorSnackBar("Login failed: Server error");
+     }
+   }
+   ```
+
+3. **Logout Function**: You can add a `logout` function as described earlier:
+
+   ```dart
+   void logout() async {
+     SessionManager sessionManager = SessionManager();
+     await sessionManager.clearSession();
+
+     // Navigate back to the login screen
+     Navigator.pushNamed(context, '/login');
+   }
+   ```
+
+4. **Checking for Login State**: In your `build` method, you can use the `SessionManager` to check the user's login state and navigate accordingly. If the user is not logged in, you can display the login form; otherwise, you can navigate to another screen.
+
+   ```dart
+   @override
+   Widget build(BuildContext context) {
+     // Check if the user is logged in
+     final isLoggedIn = SessionManager().isLoggedIn();
+
+     if (isLoggedIn) {
+       Navigator.pushReplacementNamed(context, '/home');
+       return Container();
+     }
+
+     // If the user is not logged in, display the login form
+     return Scaffold(
+       appBar: AppBar(
+         title: Text('Login'),
+       ),
+       body: YourLoginFormWidget(),
+     );
+   }
+   ```
+
+Remember to replace `'your_user_id'` and adjust the success and error handling to match your API's response. The `SessionManager` methods are assumed to exist based on the previous discussions, so make sure you've implemented the session management logic as needed.
+
+
+
+
+
+
+Implementing Firebase Cloud Messaging (FCM) for sending push notifications in your Flutter app involves several steps. Here's a high-level overview of the process:
+
+1. **Set Up Firebase Project:**
+   - Go to the [Firebase Console](https://console.firebase.google.com/), sign in, and create a new project.
+   - Follow the on-screen instructions to set up your project.
+
+2. **Register Your App:**
+   - Add your Flutter app to the Firebase project. You will need to provide your app's package name (e.g., `com.example.myapp`) and other details.
+
+3. **Download and Configure `google-services.json` (Android) and `GoogleService-Info.plist` (iOS):**
+   - Download the configuration files and add them to your app's project folder.
+   - For Android, place `google-services.json` in the `android/app` directory.
+   - For iOS, place `GoogleService-Info.plist` in the Runner project folder.
+
+4. **Add FlutterFire Plugin:**
+   - Open your `pubspec.yaml` file and add the FlutterFire plugins for Firebase Cloud Messaging and Firebase Core. For example:
+   ```yaml
+   dependencies:
+     flutter:
+       sdk: flutter
+     firebase_core: ^latest_version
+     firebase_messaging: ^latest_version
+   ```
+
+5. **Initialize Firebase:**
+   - In your Flutter app, initialize Firebase in the `main.dart` file (or equivalent) using `Firebase.initializeApp()`.
+
+   ```dart
+   import 'package:firebase_core/firebase_core.dart';
+
+   void main() async {
+     WidgetsFlutterBinding.ensureInitialized();
+     await Firebase.initializeApp();
+     runApp(MyApp());
+   }
+   ```
+
+6. **Handle Notifications in Your App:**
+   - Use the `firebase_messaging` plugin to handle incoming notifications. You can set up a `FirebaseMessaging.onMessage` handler to react to messages when your app is in the foreground, and `FirebaseMessaging.onMessageOpenedApp` to react to messages when your app is in the background.
+
+   ```dart
+   import 'package:firebase_messaging/firebase_messaging.dart';
+
+   final FirebaseMessaging _firebaseMessaging = FirebaseMessaging();
+
+   _firebaseMessaging.configure(
+     onMessage: (Map<String, dynamic> message) {
+       print("onMessage: $message");
+       // Handle foreground messages
+     },
+     onLaunch: (Map<String, dynamic> message) {
+       print("onLaunch: $message");
+       // Handle notification when app is terminated
+     },
+     onResume: (Map<String, dynamic> message) {
+       print("onResume: $message");
+       // Handle notification when app is in the background but not terminated
+     },
+   );
+   ```
+
+7. **Request Permission (iOS):**
+   - On iOS, you need to request notification permissions explicitly. Use the `firebase_messaging` plugin to request permissions and handle user responses.
+
+   ```dart
+   _firebaseMessaging.requestNotificationPermissions(
+     const IosNotificationSettings(sound: true, badge: true, alert: true),
+   );
+   ```
+
+8. **Send Push Notifications:**
+   - You can use the Firebase Console or a server-side script to send push notifications to your app.
+
+9. **Testing:**
+   - Test your notifications on both Android and iOS devices or simulators.
+
+10. **Handle Custom Data (Optional):**
+   - You can include custom data in your push notifications and handle this data in your Flutter app.
+
+Remember to stay updated with the latest versions of Firebase plugins and Flutter. The exact implementation may change over time as new versions are released, so check the official documentation for any updates or changes specific to your Flutter version.
+
+Additionally, if you're planning to send verification codes for OTP, Firebase provides services for this, but you can also explore SMS libraries or services for OTP code delivery, depending on your requirements.

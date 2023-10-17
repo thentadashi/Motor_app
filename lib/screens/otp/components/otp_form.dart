@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:pharma_shop/components/default_button.dart';
 import 'package:pharma_shop/constant.dart';
+import 'package:pharma_shop/screens/login_success/login_sucess_screen.dart';
+import 'package:pharma_shop/screens/registration_success/registration_success_screen.dart';
 import 'package:pharma_shop/size_config.dart';
 
 class OtpForm extends StatefulWidget {
@@ -109,7 +111,7 @@ void nextField({String value = '', FocusNode? focusNode}) {
           SizedBox(height:SizeConfig.screenHeight * 0.15,),
             defaultButton(
               text: "Continue",
-              press: () {},
+              press: () => Navigator.pushNamed(context, RegistrationSuccessScreen.routeName),
               key: UniqueKey(),
               ),
         ],

@@ -21,11 +21,35 @@ class ColorDots extends StatelessWidget {
       ),
       child: Row(
         children: [
-          ...List.generate(
-            product.colors.length, 
-            (index) => ColorDot(
-              color: Color(int.parse(product.colors[index].replaceAll('0x', '0xFF'))), 
-              isSelected: isSelectedColor == index,)
+          // ...List.generate(
+          //   product.colors.length, 
+          //   (index) => ColorDot(
+          //     color: Color(int.parse(product.colors[index].replaceAll('0x', '0xFF'))), 
+          //     isSelected: isSelectedColor == index,)
+          // ),
+          Row(
+            children: [
+              Text(
+                "Quantity",
+                style: TextStyle(fontWeight: FontWeight.bold),
+              ),
+              Padding(
+                padding: EdgeInsets.only(left: 12),
+                child: Container(
+                  width: 170,
+                  height: 38,
+                  child: TextFormField(
+                    keyboardType: TextInputType.number,
+                    controller: TextEditingController(text: '1'),
+                    decoration: InputDecoration(
+                      border: InputBorder.none, // Remove the default input border
+                      contentPadding: EdgeInsets.symmetric(horizontal: 12), // Adjust text padding
+                    ),
+                    textAlign:TextAlign.center,
+                  ),
+                ),
+              )
+            ],
           ),
           Spacer(),
           RoundedIconButton(

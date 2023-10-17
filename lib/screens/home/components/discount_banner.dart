@@ -26,13 +26,13 @@ class DiscountBanner extends StatelessWidget {
       ),
       child: Text.rich(
         TextSpan(
-          text: "A Summer Surprise\n",
+          text: "A Halloween Surprise\n",
           style: TextStyle(
             color: Colors.white
           ),
           children: [
             TextSpan(
-              text: "Cash back 20%",
+              text: "Cash back upto 50%",
               style: TextStyle(
                 fontSize: 24,
                 fontWeight: FontWeight.bold,

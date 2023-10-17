@@ -1,10 +1,15 @@
+import 'dart:convert';
+
 import 'package:flutter/material.dart';
+import 'package:pharma_shop/auth/session_manager.dart';
+import 'package:pharma_shop/components/custom_error_snackbar.dart';
 import 'package:pharma_shop/components/custom_suffix_icon.dart';
 import 'package:pharma_shop/components/default_button.dart';
 import 'package:pharma_shop/components/form_error.dart';
 import 'package:pharma_shop/constant.dart';
 import 'package:pharma_shop/screens/complete_profile/complete_profile_screen.dart';
 import 'package:pharma_shop/size_config.dart';
+import 'package:http/http.dart' as http;
 
 class SignUpForm extends StatefulWidget {
   const SignUpForm({super.key});
@@ -18,7 +23,9 @@ class _SignUpFormState extends State<SignUpForm> {
   String email = "";
   String password = "";
   String confirm_password = "";
+  SessionManager sessionManager = SessionManager();
   final List<String> errors = [];
+  
 
     void addError({String? error}) {
     if (!errors.contains(error))
@@ -33,6 +40,40 @@ class _SignUpFormState extends State<SignUpForm> {
       errors.remove(error);
     });
   }
+
+    void showErrorSnackBar(String errorMessage) {
+      ScaffoldMessenger.of(context).showSnackBar(
+        SnackBar(
+          content: CustomSnackbarContent(errorMessage:errorMessage,),
+          behavior: SnackBarBehavior.floating,
+          backgroundColor: Colors.transparent,
+          elevation: 0,
+        ),
+      );
+    }
+
+      Future<void> signUp(String email, String password) async {
+        final response = await http.post(
+          Uri.parse('http://192.168.100.175:81/flutter_apps/Pharma_app/sign_up/sign_up_script.php'),
+          body: {
+            'email': email,
+            'password': password,
+          },
+        );
+
+        if (response.statusCode == 200) {
+          final Map<String, dynamic> data = json.decode(response.body);
+          if (data["success"]) {
+            final String userId = data["user_id"].toString();
+            Navigator.pushNamed(context, CompleteProfileScreen.routeName, arguments: userId);
+          } else {
+            showErrorSnackBar("Registration failed: ${data["message"]}");
+          }
+        } else {
+          showErrorSnackBar("Registration failed: An error occurred.");
+        }
+      }
+
 
   @override
   Widget build(BuildContext context) {
@@ -55,12 +96,12 @@ class _SignUpFormState extends State<SignUpForm> {
           FormError(errors: errors),
           defaultButton(
             text: "Continue", 
-            press: (){
-              if(_formKey.currentState!.validate()){
-                // go to complete profile page
-                Navigator.pushNamed(context, CompleteProfileScreen.routeName);
+            press: () async {
+              if (_formKey.currentState!.validate()) {
+                _formKey.currentState!.save();
+                await signUp(email, password);
               }
-            }, 
+            },
             key: UniqueKey(),
           ),
         ],

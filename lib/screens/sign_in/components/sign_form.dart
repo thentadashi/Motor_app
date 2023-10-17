@@ -1,11 +1,11 @@
-// ignore_for_file: prefer_const_constructors, avoid_returning_null_for_void, use_build_context_synchronously
-
-
 import 'package:flutter/material.dart';
+import 'package:flutter_svg/flutter_svg.dart';
+import 'package:pharma_shop/components/custom_error_snackbar.dart';
 import 'package:pharma_shop/components/custom_suffix_icon.dart';
 import 'package:pharma_shop/components/default_button.dart';
 import 'package:pharma_shop/components/form_error.dart';
 import 'package:pharma_shop/constant.dart';
+import 'package:pharma_shop/screens/forgot_password/forgot_password_screen.dart';
 import 'package:pharma_shop/screens/login_success/login_sucess_screen.dart';
 import 'package:pharma_shop/size_config.dart';
 import 'package:pharma_shop/auth/session_manager.dart';
@@ -25,18 +25,16 @@ class _SignFormState extends State<SignForm> {
   String password = "";
   final List<String> errors = [];
   SessionManager sessionManager = SessionManager();
+  bool remember = false;
 
 
   void showErrorSnackBar(String errorMessage) {
     ScaffoldMessenger.of(context).showSnackBar(
       SnackBar(
-        content: Text(errorMessage),
-        action: SnackBarAction(
-          label: 'Close',
-          onPressed: () {
-            ScaffoldMessenger.of(context).hideCurrentSnackBar();
-          },
-        ),
+        content: CustomSnackbarContent(errorMessage:errorMessage,),
+        behavior: SnackBarBehavior.floating,
+        backgroundColor: Colors.transparent,
+        elevation: 0,
       ),
     );
   }
@@ -66,20 +64,22 @@ class _SignFormState extends State<SignForm> {
     }
   }
 
-  void addError({String? error}) {
-    if (!errors.contains(error))
+  
+  void addError({required String error}) {
+    if (!errors.contains(error)) {
       setState(() {
-        errors.add(error!);
+        errors.add(error);
       });
+    }
   }
 
-  void removeError({String? error}) {
-    if (!errors.contains(error))
+  void removeError({required String error}) {
+    if (errors.contains(error)) {
       setState(() {
         errors.remove(error);
       });
+    }
   }
-  
 
   @override
   Widget build(BuildContext context) {
@@ -90,6 +90,30 @@ class _SignFormState extends State<SignForm> {
           buildEmailFormField(),
           SizedBox(height: getProportionateScreenHeight(30)),
           buildPasswordFormField(),
+          SizedBox(height: getProportionateScreenHeight(30)),
+          Row(
+            children: [
+              Checkbox(
+                value: remember,
+                activeColor: kPrimaryColor,
+                onChanged: (value) {
+                  setState(() {
+                    remember = value!;
+                  });
+                },
+              ),
+              Text("Remember me"),
+              Spacer(),
+              GestureDetector(
+                onTap: () => Navigator.pushNamed(
+                    context, ForgotPasswordScreen.routeName),
+                child: Text(
+                  "Forgot Password",
+                  style: TextStyle(decoration: TextDecoration.underline),
+                ),
+              )
+            ],
+          ),
           FormError(errors: errors),
           SizedBox(height: getProportionateScreenHeight(20)),
           defaultButton(
@@ -97,7 +121,6 @@ class _SignFormState extends State<SignForm> {
             press: () async {
               if (_formKey.currentState!.validate()) {
                 _formKey.currentState!.save();
-                // Make a login request here
                 await login(email, password);
               }
             },
@@ -113,14 +136,19 @@ class _SignFormState extends State<SignForm> {
       obscureText: true,
       onSaved: (newValue) => password = newValue!,
       onChanged: (value) {
-        if (value.isNotEmpty && errors.contains(kPassNullError)) {
+        if (value.isNotEmpty) {
           removeError(error: kPassNullError);
+        } else if (value.length >= 8) {
+          removeError(error: kShortPassError);
         }
         return null;
       },
       validator: (value) {
-        if (value?.isEmpty ?? true && !errors.contains(kPassNullError)) {
+        if (value!.isEmpty) {
           addError(error: kPassNullError);
+          return "";
+        } else if (value.length < 8) {
+          addError(error: kShortPassError);
           return "";
         }
         return null;
@@ -139,14 +167,19 @@ class _SignFormState extends State<SignForm> {
       keyboardType: TextInputType.emailAddress,
       onSaved: (newValue) => email = newValue!,
       onChanged: (value) {
-        if (value.isNotEmpty && errors.contains(kEmailNullError)) {
+        if (value.isNotEmpty) {
           removeError(error: kEmailNullError);
+        } else if (emailValidatorRegExp.hasMatch(value)) {
+          removeError(error: kInvalidEmailError);
         }
         return null;
       },
       validator: (value) {
-        if (value?.isEmpty ?? true && !errors.contains(kEmailNullError)) {
+        if (value!.isEmpty) {
           addError(error: kEmailNullError);
+          return "";
+        } else if (!emailValidatorRegExp.hasMatch(value!)) {
+          addError(error: kInvalidEmailError);
           return "";
         }
         return null;
@@ -160,3 +193,4 @@ class _SignFormState extends State<SignForm> {
     );
   }
 }
+

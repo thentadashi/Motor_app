@@ -4,7 +4,11 @@ import 'package:pharma_shop/screens/complete_profile/components/complete_profile
 import 'package:pharma_shop/size_config.dart';
 
 class Body extends StatelessWidget {
-  const Body({super.key});
+
+  final String userId;
+
+  const Body({Key? key, required this.userId}) : super(key: key);
+
 
   @override
   Widget build(BuildContext context) {
@@ -25,7 +29,7 @@ class Body extends StatelessWidget {
                 textAlign: TextAlign.center,
                 ),
               SizedBox(height: SizeConfig.screenHeight * 0.05,), // 5% on total screen size
-              CompleteProfileForm(),
+              CompleteProfileForm(userId: userId,),
               SizedBox(
                 height: getProportionateScreenHeight(30),
               ),

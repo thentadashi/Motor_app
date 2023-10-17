@@ -32,13 +32,11 @@ String color4 = '0xFFFFFFFF';
 List<Product> demoProducts = [
   Product(
     images: [
-      "assets/images/ps4_console_white_1.png",
-      "assets/images/ps4_console_white_2.png",
-      "assets/images/ps4_console_white_3.png",
-      "assets/images/ps4_console_white_4.png",
+      "assets/images/TAUREX_120ML__1104.png",
+      "assets/images/TAUREX_240ML__28038.png",
     ],
     colors: [color1, color2, color3, color4], 
-    title: "Wireless Controler for PS4",
+    title: "Taurex Syrup",
     price: 250.99,
     description: description,
     rating: 4.8,
@@ -48,11 +46,11 @@ List<Product> demoProducts = [
   ),
   Product(
     images: [
-      "assets/images/glap.png",
+      "assets/images/ascorbi-acid-zinc__77556.png",
     ],
     colors: [color1, color2, color3, color4],
 
-    title: "Gloves XC Omega Polygon",
+    title: "Ascorbic Acid+Zinc Cap M&D",
     price: 220.99,
     description: description,
     rating: 4.1,
@@ -62,10 +60,10 @@ List<Product> demoProducts = [
   ),
   Product(
     images: [
-      "assets/images/wireless headset.png",
+      "assets/images/003813__51498.png",
     ],
     colors: [color1, color2, color3, color4],
-    title: "Logitech Headphone",
+    title: "Poten-Cee 500mg",
     price: 120.99,
     description: description,
     rating: 4.8,
@@ -75,10 +73,23 @@ List<Product> demoProducts = [
   ),
   Product(
     images: [
-      "assets/images/Image Popular Product 2.png",
+      "assets/images/004454__61462.png",
     ],
     colors: [color1, color2, color3, color4],
-    title: "Nike Sport White - Man Pants",
+    title: "Solmux 500mg",
+    price: 120.99,
+    description: description,
+    rating: 4.7,
+    isFavourate: true,
+    isPopular: false,
+    id: 4,
+  ),
+    Product(
+    images: [
+      "assets/images/007421__59362.png",
+    ],
+    colors: [color1, color2, color3, color4],
+    title: "Alaxan FR 200mg",
     price: 120.99,
     description: description,
     rating: 4.7,
@@ -89,4 +100,4 @@ List<Product> demoProducts = [
 ];
 
 const String description = 
-  "Wireless controller for PS4 gives you what you want in your gaming from over precision";
+  "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's";

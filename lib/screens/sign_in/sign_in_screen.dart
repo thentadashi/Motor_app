@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'components/body.dart';
-import 'package:pharma_shop/screens/home/home_screen.dart';
-import 'package:pharma_shop/auth/session_manager.dart';
+import 'package:Motorcycle_shop_app/screens/home/home_screen.dart';
+import 'package:Motorcycle_shop_app/auth/session_manager.dart';
 
 class SignInScreen extends StatelessWidget {
   static String routeName = "/sign_in";

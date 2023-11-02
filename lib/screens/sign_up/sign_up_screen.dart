@@ -1,5 +1,5 @@
 import "package:flutter/material.dart";
-import "package:pharma_shop/screens/sign_up/components/body.dart";
+import "package:Motorcycle_shop_app/screens/sign_up/components/body.dart";
 
 class SignUpScreen extends StatelessWidget {
   const SignUpScreen({super.key});

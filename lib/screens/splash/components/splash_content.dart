@@ -1,8 +1,8 @@
 // ignore_for_file: prefer_const_constructors
 
 import 'package:flutter/material.dart';
-import 'package:pharma_shop/constant.dart';
-import 'package:pharma_shop/size_config.dart';
+import 'package:Motorcycle_shop_app/constant.dart';
+import 'package:Motorcycle_shop_app/size_config.dart';
 
 
 class SplashContent extends StatelessWidget {
@@ -19,7 +19,7 @@ class SplashContent extends StatelessWidget {
       children: <Widget>[
         Spacer(flex: 3),
         Text(
-          "Pharma App",
+          "Motorcycle shop app",
           style: TextStyle(fontSize: getProportionateScreenWidth(70),
           color: kPrimaryColor,
           fontWeight: FontWeight.bold

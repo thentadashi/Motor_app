@@ -1,10 +1,10 @@
 // ignore_for_file: prefer_const_literals_to_create_immutables, prefer_const_constructors
 
 import 'package:flutter/material.dart';
-import 'package:pharma_shop/auth/session_manager.dart';
-import 'package:pharma_shop/screens/profile/components/profile_menu.dart';
-import 'package:pharma_shop/screens/profile/components/profile_pic.dart';
-import 'package:pharma_shop/screens/sign_in/sign_in_screen.dart';
+import 'package:Motorcycle_shop_app/auth/session_manager.dart';
+import 'package:Motorcycle_shop_app/screens/profile/components/profile_menu.dart';
+import 'package:Motorcycle_shop_app/screens/profile/components/profile_pic.dart';
+import 'package:Motorcycle_shop_app/screens/sign_in/sign_in_screen.dart';
 
 
 class Body extends StatelessWidget {

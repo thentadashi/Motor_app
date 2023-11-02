@@ -2,10 +2,10 @@
 
 
 import 'package:flutter/material.dart';
-import 'package:pharma_shop/components/no_account_text.dart';
-import 'package:pharma_shop/components/social_card.dart';
-import 'package:pharma_shop/screens/sign_in/components/sign_form.dart';
-import 'package:pharma_shop/size_config.dart';
+import 'package:Motorcycle_shop_app/components/no_account_text.dart';
+import 'package:Motorcycle_shop_app/components/social_card.dart';
+import 'package:Motorcycle_shop_app/screens/sign_in/components/sign_form.dart';
+import 'package:Motorcycle_shop_app/size_config.dart';
 
 class Body extends StatelessWidget{
   @override
@@ -22,7 +22,7 @@ class Body extends StatelessWidget{
               children:[
                 SizedBox(height: SizeConfig.screenHeight * 0.04),
                 Text(
-                  "Welcome Back",
+                  "Welcome to Moto App",
                 style: TextStyle(
                   color: Colors.black,
                   fontSize: getProportionateScreenWidth(55),

@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:pharma_shop/constant.dart';
-import 'package:pharma_shop/models/product.dart';
-import 'package:pharma_shop/size_config.dart';
+import 'package:Motorcycle_shop_app/constant.dart';
+import 'package:Motorcycle_shop_app/models/product.dart';
+import 'package:Motorcycle_shop_app/size_config.dart';
 
 class ProductImages extends StatefulWidget {
   const ProductImages({

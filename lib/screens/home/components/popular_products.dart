@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
-import 'package:pharma_shop/components/product_card.dart';
-import 'package:pharma_shop/models/product.dart';
-import 'package:pharma_shop/screens/details/details_screen.dart';
-import 'package:pharma_shop/screens/home/components/section_title.dart';
-import 'package:pharma_shop/size_config.dart';
+import 'package:Motorcycle_shop_app/components/product_card.dart';
+import 'package:Motorcycle_shop_app/models/product.dart';
+import 'package:Motorcycle_shop_app/screens/details/details_screen.dart';
+import 'package:Motorcycle_shop_app/screens/home/components/section_title.dart';
+import 'package:Motorcycle_shop_app/size_config.dart';
 
 class PoppularProduct extends StatelessWidget {
   const PoppularProduct({

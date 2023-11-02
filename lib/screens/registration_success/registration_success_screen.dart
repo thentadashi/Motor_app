@@ -1,5 +1,5 @@
 import "package:flutter/material.dart";
-import "package:pharma_shop/screens/registration_success/components/body.dart";
+import "package:Motorcycle_shop_app/screens/registration_success/components/body.dart";
 
 
 class RegistrationSuccessScreen extends StatelessWidget {

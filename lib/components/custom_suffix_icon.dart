@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
-import 'package:pharma_shop/size_config.dart';
+import 'package:Motorcycle_shop_app/size_config.dart';
 
 class CustomSuffixIcon extends StatelessWidget {
   const CustomSuffixIcon({

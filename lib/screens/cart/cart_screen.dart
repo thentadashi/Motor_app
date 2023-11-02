@@ -4,11 +4,11 @@
 
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
-import 'package:pharma_shop/components/default_button.dart';
-import 'package:pharma_shop/constant.dart';
-import 'package:pharma_shop/models/cart.dart';
-import 'package:pharma_shop/screens/cart/components/body.dart';
-import 'package:pharma_shop/size_config.dart';
+import 'package:Motorcycle_shop_app/components/default_button.dart';
+import 'package:Motorcycle_shop_app/constant.dart';
+import 'package:Motorcycle_shop_app/models/cart.dart';
+import 'package:Motorcycle_shop_app/screens/cart/components/body.dart';
+import 'package:Motorcycle_shop_app/size_config.dart';
 
 class CartScreen extends StatelessWidget {
   const CartScreen({super.key});

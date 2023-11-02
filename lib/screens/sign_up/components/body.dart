@@ -1,8 +1,8 @@
 import "package:flutter/material.dart";
-import "package:pharma_shop/components/social_card.dart";
-import "package:pharma_shop/constant.dart";
-import "package:pharma_shop/screens/sign_up/components/sign_up_form.dart";
-import "package:pharma_shop/size_config.dart";
+import "package:Motorcycle_shop_app/components/social_card.dart";
+import "package:Motorcycle_shop_app/constant.dart";
+import "package:Motorcycle_shop_app/screens/sign_up/components/sign_up_form.dart";
+import "package:Motorcycle_shop_app/size_config.dart";
 
 class Body extends StatelessWidget {
   const Body({super.key});

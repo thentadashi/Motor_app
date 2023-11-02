@@ -1,5 +1,5 @@
 import "package:flutter/material.dart";
-import "package:pharma_shop/screens/otp/components/body.dart";
+import "package:Motorcycle_shop_app/screens/otp/components/body.dart";
 
 class OtpScreen extends StatelessWidget {
   const OtpScreen({Key? key, required this.userId, required this.email, required this.code}) : super(key: key);

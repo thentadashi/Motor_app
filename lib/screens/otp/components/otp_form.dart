@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
-import 'package:pharma_shop/components/default_button.dart';
-import 'package:pharma_shop/constant.dart';
-import 'package:pharma_shop/screens/login_success/login_sucess_screen.dart';
-import 'package:pharma_shop/screens/registration_success/registration_success_screen.dart';
-import 'package:pharma_shop/size_config.dart';
+import 'package:Motorcycle_shop_app/components/default_button.dart';
+import 'package:Motorcycle_shop_app/constant.dart';
+import 'package:Motorcycle_shop_app/screens/login_success/login_sucess_screen.dart';
+import 'package:Motorcycle_shop_app/screens/registration_success/registration_success_screen.dart';
+import 'package:Motorcycle_shop_app/size_config.dart';
 
 class OtpForm extends StatefulWidget {
   const OtpForm({super.key});

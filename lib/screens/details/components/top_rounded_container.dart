@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:pharma_shop/size_config.dart';
+import 'package:Motorcycle_shop_app/size_config.dart';
 
 class TopRoundedContainer extends StatelessWidget {
   const TopRoundedContainer({

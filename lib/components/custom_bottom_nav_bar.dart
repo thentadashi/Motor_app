@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
-import 'package:pharma_shop/constant.dart';
-import 'package:pharma_shop/enums.dart';
-import 'package:pharma_shop/screens/home/home_screen.dart';
-import 'package:pharma_shop/screens/profile/profile_screen.dart';
+import 'package:Motorcycle_shop_app/constant.dart';
+import 'package:Motorcycle_shop_app/enums.dart';
+import 'package:Motorcycle_shop_app/screens/home/home_screen.dart';
+import 'package:Motorcycle_shop_app/screens/profile/profile_screen.dart';
 
 class CustomButtomNavBar extends StatelessWidget {
   const CustomButtomNavBar({

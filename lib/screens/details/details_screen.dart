@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:pharma_shop/models/product.dart';
-import 'package:pharma_shop/screens/details/components/body.dart';
-import 'package:pharma_shop/screens/details/components/custom_app_bar.dart';
+import 'package:Motorcycle_shop_app/models/product.dart';
+import 'package:Motorcycle_shop_app/screens/details/components/body.dart';
+import 'package:Motorcycle_shop_app/screens/details/components/custom_app_bar.dart';
 
 
  class DetailsScreen extends StatelessWidget {

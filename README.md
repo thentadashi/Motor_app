@@ -1,4 +1,4 @@
-# pharma_shop
+# Motorcycle_shop_app
 
 A new Flutter project.
 
@@ -28,9 +28,9 @@ import { getAnalytics } from "firebase/analytics";
 // For Firebase JS SDK v7.20.0 and later, measurementId is optional
 const firebaseConfig = {
   apiKey: "AIzaSyDqaaIK4Vq9tXWPI9s45JhEwg9OJXn25Lk",
-  authDomain: "pharmaapp-9ac2e.firebaseapp.com",
-  projectId: "pharmaapp-9ac2e",
-  storageBucket: "pharmaapp-9ac2e.appspot.com",
+  authDomain: "Motorcycle shopapp-9ac2e.firebaseapp.com",
+  projectId: "Motorcycle shopapp-9ac2e",
+  storageBucket: "Motorcycle shopapp-9ac2e.appspot.com",
   messagingSenderId: "1006860063986",
   appId: "1:1006860063986:web:b1bf83a7937b0e25012c6b",
   measurementId: "G-BSY814V9TL"

@@ -1,9 +1,9 @@
 // ignore_for_file: prefer_const_constructors
 
 import 'package:flutter/material.dart';
-import 'package:pharma_shop/constant.dart';
-import 'package:pharma_shop/screens/otp/components/otp_form.dart';
-import 'package:pharma_shop/size_config.dart';
+import 'package:Motorcycle_shop_app/constant.dart';
+import 'package:Motorcycle_shop_app/screens/otp/components/otp_form.dart';
+import 'package:Motorcycle_shop_app/size_config.dart';
 
 class Body extends StatelessWidget {
   final String userId;

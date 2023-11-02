@@ -1,12 +1,12 @@
 import 'package:flutter/material.dart';
-import 'package:pharma_shop/size_config.dart';
+import 'package:Motorcycle_shop_app/size_config.dart';
 
-const kPrimaryColor = Color(0xFFFF7643);
-const kPrimaryLightColor = Color(0xFFFFECDF);
+const kPrimaryColor = Color(0xFF01579B);
+const kPrimaryLightColor = Color(0xFFB3E5FC);
 const kPrimaryGradientColor = LinearGradient(
   begin: Alignment.topLeft,
   end: Alignment.bottomRight,
-  colors:[Color(0xFFFFA53E), Color(0xFFFF7643)],
+  colors:[Color(0xFF0277BD), Color(0xFF01579B)],
   );
   const kSecondaryColor = Color(0xFF979797);
   const kTextColor = Color(0xFF757575);

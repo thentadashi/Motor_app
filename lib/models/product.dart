@@ -32,11 +32,13 @@ String color4 = '0xFFFFFFFF';
 List<Product> demoProducts = [
   Product(
     images: [
-      "assets/images/TAUREX_120ML__1104.png",
-      "assets/images/TAUREX_240ML__28038.png",
+      "assets/images/honda_click125_1.jpg",
+      "assets/images/honda_click125_2.jpg",
+      "assets/images/honda_click125_3.jpg",
+      "assets/images/honda_click125_4.jpg",
     ],
     colors: [color1, color2, color3, color4], 
-    title: "Taurex Syrup",
+    title: "Honda Click 125",
     price: 250.99,
     description: description,
     rating: 4.8,
@@ -46,11 +48,11 @@ List<Product> demoProducts = [
   ),
   Product(
     images: [
-      "assets/images/ascorbi-acid-zinc__77556.png",
+      "assets/images/adv1.jpg",
     ],
     colors: [color1, color2, color3, color4],
 
-    title: "Ascorbic Acid+Zinc Cap M&D",
+    title: "HONDA ADV 160",
     price: 220.99,
     description: description,
     rating: 4.1,
@@ -60,10 +62,10 @@ List<Product> demoProducts = [
   ),
   Product(
     images: [
-      "assets/images/003813__51498.png",
+      "assets/images/honda_pcx_1.webp",
     ],
     colors: [color1, color2, color3, color4],
-    title: "Poten-Cee 500mg",
+    title: "Honda PCX160",
     price: 120.99,
     description: description,
     rating: 4.8,
@@ -73,10 +75,10 @@ List<Product> demoProducts = [
   ),
   Product(
     images: [
-      "assets/images/004454__61462.png",
+      "assets/images/RS-125-3.jpg",
     ],
     colors: [color1, color2, color3, color4],
-    title: "Solmux 500mg",
+    title: "RS 125",
     price: 120.99,
     description: description,
     rating: 4.7,
@@ -86,10 +88,10 @@ List<Product> demoProducts = [
   ),
     Product(
     images: [
-      "assets/images/007421__59362.png",
+      "assets/images/miogear.jpg",
     ],
     colors: [color1, color2, color3, color4],
-    title: "Alaxan FR 200mg",
+    title: "Yamaha Mio Gear",
     price: 120.99,
     description: description,
     rating: 4.7,

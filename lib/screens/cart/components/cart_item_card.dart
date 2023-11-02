@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:pharma_shop/constant.dart';
-import 'package:pharma_shop/models/cart.dart';
-import 'package:pharma_shop/size_config.dart';
+import 'package:Motorcycle_shop_app/constant.dart';
+import 'package:Motorcycle_shop_app/models/cart.dart';
+import 'package:Motorcycle_shop_app/size_config.dart';
 
 class CartItemCard extends StatelessWidget {
   const CartItemCard({

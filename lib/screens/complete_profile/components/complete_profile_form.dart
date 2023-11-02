@@ -1,12 +1,12 @@
 
 import 'package:flutter/material.dart';
-import 'package:pharma_shop/components/custom_error_snackbar.dart';
-import 'package:pharma_shop/components/custom_suffix_icon.dart';
-import 'package:pharma_shop/components/default_button.dart';
-import 'package:pharma_shop/components/form_error.dart';
-import 'package:pharma_shop/constant.dart';
-import 'package:pharma_shop/screens/otp/otp_screen.dart';
-import 'package:pharma_shop/size_config.dart';
+import 'package:Motorcycle_shop_app/components/custom_error_snackbar.dart';
+import 'package:Motorcycle_shop_app/components/custom_suffix_icon.dart';
+import 'package:Motorcycle_shop_app/components/default_button.dart';
+import 'package:Motorcycle_shop_app/components/form_error.dart';
+import 'package:Motorcycle_shop_app/constant.dart';
+import 'package:Motorcycle_shop_app/screens/otp/otp_screen.dart';
+import 'package:Motorcycle_shop_app/size_config.dart';
 import 'package:http/http.dart' as http;
 import 'dart:convert';
 
@@ -53,7 +53,7 @@ class _CompleteProfileFormState extends State<CompleteProfileForm> {
 
     Future<void> completeProfile(String firstName, String lastName, String address, String phoneNumber) async {
     final response = await http.post(
-      Uri.parse('http://192.168.100.175:81/flutter_apps/Pharma_app/sign_up/complete_profile_script.php'),
+      Uri.parse('http://192.168.100.175:81/flutter_apps/motor_app/sign_up/complete_profile_script.php'),
       body: {
           'user_id': widget.userId,
           'first_name': firstName,

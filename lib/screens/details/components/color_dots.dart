@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
-import 'package:pharma_shop/components/rounded_icon_button.dart';
-import 'package:pharma_shop/constant.dart';
-import 'package:pharma_shop/models/product.dart';
-import 'package:pharma_shop/size_config.dart';
+import 'package:Motorcycle_shop_app/components/rounded_icon_button.dart';
+import 'package:Motorcycle_shop_app/constant.dart';
+import 'package:Motorcycle_shop_app/models/product.dart';
+import 'package:Motorcycle_shop_app/size_config.dart';
 
 class ColorDots extends StatelessWidget {
   const ColorDots({
@@ -21,36 +21,36 @@ class ColorDots extends StatelessWidget {
       ),
       child: Row(
         children: [
-          // ...List.generate(
-          //   product.colors.length, 
-          //   (index) => ColorDot(
-          //     color: Color(int.parse(product.colors[index].replaceAll('0x', '0xFF'))), 
-          //     isSelected: isSelectedColor == index,)
-          // ),
-          Row(
-            children: [
-              Text(
-                "Quantity",
-                style: TextStyle(fontWeight: FontWeight.bold),
-              ),
-              Padding(
-                padding: EdgeInsets.only(left: 12),
-                child: Container(
-                  width: 170,
-                  height: 38,
-                  child: TextFormField(
-                    keyboardType: TextInputType.number,
-                    controller: TextEditingController(text: '1'),
-                    decoration: InputDecoration(
-                      border: InputBorder.none, // Remove the default input border
-                      contentPadding: EdgeInsets.symmetric(horizontal: 12), // Adjust text padding
-                    ),
-                    textAlign:TextAlign.center,
-                  ),
-                ),
-              )
-            ],
+          ...List.generate(
+            product.colors.length, 
+            (index) => ColorDot(
+              color: Color(int.parse(product.colors[index].replaceAll('0x', '0xFF'))), 
+              isSelected: isSelectedColor == index,)
           ),
+          // Row(
+          //   children: [
+          //     Text(
+          //       "Quantity",
+          //       style: TextStyle(fontWeight: FontWeight.bold),
+          //     ),
+          //     Padding(
+          //       padding: EdgeInsets.only(left: 12),
+          //       child: Container(
+          //         width: 170,
+          //         height: 38,
+          //         child: TextFormField(
+          //           keyboardType: TextInputType.number,
+          //           controller: TextEditingController(text: '1'),
+          //           decoration: InputDecoration(
+          //             border: InputBorder.none, // Remove the default input border
+          //             contentPadding: EdgeInsets.symmetric(horizontal: 12), // Adjust text padding
+          //           ),
+          //           textAlign:TextAlign.center,
+          //         ),
+          //       ),
+          //     )
+          //   ],
+          // ),
           Spacer(),
           RoundedIconButton(
             iconData: Icons.remove,

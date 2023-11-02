@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
-import 'package:pharma_shop/components/rounded_icon_button.dart';
-import 'package:pharma_shop/size_config.dart';
+import 'package:Motorcycle_shop_app/components/rounded_icon_button.dart';
+import 'package:Motorcycle_shop_app/size_config.dart';
 
 class CustomAppBar extends StatelessWidget implements PreferredSizeWidget {
   final double rating;

@@ -1,7 +1,7 @@
 import "package:flutter/material.dart";
-import "package:pharma_shop/components/default_button.dart";
-import "package:pharma_shop/screens/sign_in/sign_in_screen.dart";
-import "package:pharma_shop/size_config.dart";
+import "package:Motorcycle_shop_app/components/default_button.dart";
+import "package:Motorcycle_shop_app/screens/sign_in/sign_in_screen.dart";
+import "package:Motorcycle_shop_app/size_config.dart";
 
 class Body extends StatelessWidget {
   const Body({super.key});
@@ -16,7 +16,7 @@ class Body extends StatelessWidget {
           children: [
             SizedBox(height: SizeConfig.screenHeight * 0.04),
             Image.asset(
-              "assets/images/success.png",
+              "assets/images/key.jpg",
               height: SizeConfig.screenHeight *0.4,
             ),
             SizedBox(height: SizeConfig.screenHeight * 0.08),

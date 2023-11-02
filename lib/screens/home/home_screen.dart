@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
-import 'package:pharma_shop/auth/session_manager.dart';
-import 'package:pharma_shop/components/custom_bottom_nav_bar.dart';
-import 'package:pharma_shop/enums.dart';
-import 'package:pharma_shop/screens/home/components/body.dart';
-import 'package:pharma_shop/screens/sign_in/sign_in_screen.dart';
+import 'package:Motorcycle_shop_app/auth/session_manager.dart';
+import 'package:Motorcycle_shop_app/components/custom_bottom_nav_bar.dart';
+import 'package:Motorcycle_shop_app/enums.dart';
+import 'package:Motorcycle_shop_app/screens/home/components/body.dart';
+import 'package:Motorcycle_shop_app/screens/sign_in/sign_in_screen.dart';
 
 class HomeScreen extends StatelessWidget {
   HomeScreen({super.key});

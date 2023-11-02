@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:pharma_shop/screens/forgot_password/components/body.dart';
+import 'package:Motorcycle_shop_app/screens/forgot_password/components/body.dart';
 
 class ForgotPasswordScreen extends StatelessWidget {
   const ForgotPasswordScreen({Key? key}) : super(key: key);

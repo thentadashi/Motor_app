@@ -1,7 +1,7 @@
 // ignore_for_file: prefer_const_constructors, deprecated_member_use
 
 import 'package:flutter/material.dart';
-import 'package:pharma_shop/constant.dart';
+import 'package:Motorcycle_shop_app/constant.dart';
 
 
 ThemeData theme(){
@@ -21,7 +21,7 @@ ThemeData theme(){
 
 InputDecorationTheme inputDecorationTheme() {
   OutlineInputBorder outlineInputBorder = OutlineInputBorder(
-          borderRadius: BorderRadius.circular(28),
+          borderRadius: BorderRadius.circular(10),
           borderSide: BorderSide(color: kTextColor),
           gapPadding: 10,
           );

@@ -1,6 +1,6 @@
 {
-    "name": "pharma_shop",
-    "short_name": "pharma_shop",
+    "name": "Motorcycle_shop_app",
+    "short_name": "Motorcycle_shop_app",
     "start_url": ".",
     "display": "standalone",
     "background_color": "#0175C2",

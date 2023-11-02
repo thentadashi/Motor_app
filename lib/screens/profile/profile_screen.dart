@@ -1,10 +1,10 @@
 // ignore_for_file: prefer_const_literals_to_create_immutables, prefer_const_constructors
 
 import 'package:flutter/material.dart';
-import 'package:pharma_shop/auth/session_manager.dart';
-import 'package:pharma_shop/components/custom_bottom_nav_bar.dart';
-import 'package:pharma_shop/enums.dart';
-import 'package:pharma_shop/screens/profile/components/body.dart';
+import 'package:Motorcycle_shop_app/auth/session_manager.dart';
+import 'package:Motorcycle_shop_app/components/custom_bottom_nav_bar.dart';
+import 'package:Motorcycle_shop_app/enums.dart';
+import 'package:Motorcycle_shop_app/screens/profile/components/body.dart';
 
 class ProfileScreen extends StatelessWidget {
   ProfileScreen({super.key});

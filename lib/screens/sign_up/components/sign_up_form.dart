@@ -1,14 +1,14 @@
 import 'dart:convert';
 
 import 'package:flutter/material.dart';
-import 'package:pharma_shop/auth/session_manager.dart';
-import 'package:pharma_shop/components/custom_error_snackbar.dart';
-import 'package:pharma_shop/components/custom_suffix_icon.dart';
-import 'package:pharma_shop/components/default_button.dart';
-import 'package:pharma_shop/components/form_error.dart';
-import 'package:pharma_shop/constant.dart';
-import 'package:pharma_shop/screens/complete_profile/complete_profile_screen.dart';
-import 'package:pharma_shop/size_config.dart';
+import 'package:Motorcycle_shop_app/auth/session_manager.dart';
+import 'package:Motorcycle_shop_app/components/custom_error_snackbar.dart';
+import 'package:Motorcycle_shop_app/components/custom_suffix_icon.dart';
+import 'package:Motorcycle_shop_app/components/default_button.dart';
+import 'package:Motorcycle_shop_app/components/form_error.dart';
+import 'package:Motorcycle_shop_app/constant.dart';
+import 'package:Motorcycle_shop_app/screens/complete_profile/complete_profile_screen.dart';
+import 'package:Motorcycle_shop_app/size_config.dart';
 import 'package:http/http.dart' as http;
 
 class SignUpForm extends StatefulWidget {
@@ -54,7 +54,7 @@ class _SignUpFormState extends State<SignUpForm> {
 
       Future<void> signUp(String email, String password) async {
         final response = await http.post(
-          Uri.parse('http://192.168.100.175:81/flutter_apps/Pharma_app/sign_up/sign_up_script.php'),
+          Uri.parse('http://192.168.100.175:81/flutter_apps/motor_app/sign_up/sign_up_script.php'),
           body: {
             'email': email,
             'password': password,

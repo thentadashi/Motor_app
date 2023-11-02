@@ -2,10 +2,10 @@
 // ignore_for_file: prefer_const_constructors, prefer_const_literals_to_create_immutables, use_key_in_widget_constructors, library_private_types_in_public_api
 
 import 'package:flutter/material.dart';
-import 'package:pharma_shop/components/default_button.dart';
-import 'package:pharma_shop/constant.dart';
-import 'package:pharma_shop/screens/sign_in/sign_in_screen.dart';
-import 'package:pharma_shop/size_config.dart';
+import 'package:Motorcycle_shop_app/components/default_button.dart';
+import 'package:Motorcycle_shop_app/constant.dart';
+import 'package:Motorcycle_shop_app/screens/sign_in/sign_in_screen.dart';
+import 'package:Motorcycle_shop_app/size_config.dart';
 import '../components/splash_content.dart';
 
 class Body extends StatefulWidget {
@@ -17,16 +17,16 @@ class _BodyState extends State<Body> {
     int currentPage = 0;
     List<Map<String, String>> splashData = [
     {
-      "text": "Welcome to Pharma app, Let's shop!",
-      "image": "assets/images/splash_1.png"
+      "text": "Welcome to Motorcycle shop app, Driving Dreams, Delivering Quality!",
+      "image": "assets/images/splash.jpg"
     },
     {
       "text": "We help people connect with the store \naround Philippines",
-      "image": "assets/images/splash_2.png"
+      "image": "assets/images/splash.jpg"
     },
     {
       "text": "We show the easy way to shop. \nJust stay at home  with us",
-      "image": "assets/images/splash_3.png"
+      "image": "assets/images/splash.jpg"
     },
   
   ];

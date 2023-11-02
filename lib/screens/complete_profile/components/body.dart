@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:pharma_shop/constant.dart';
-import 'package:pharma_shop/screens/complete_profile/components/complete_profile_form.dart';
-import 'package:pharma_shop/size_config.dart';
+import 'package:Motorcycle_shop_app/constant.dart';
+import 'package:Motorcycle_shop_app/screens/complete_profile/components/complete_profile_form.dart';
+import 'package:Motorcycle_shop_app/size_config.dart';
 
 class Body extends StatelessWidget {
 

@@ -1,10 +1,10 @@
 import "package:flutter/material.dart";
-import "package:pharma_shop/components/custom_suffix_icon.dart";
-import "package:pharma_shop/components/default_button.dart";
-import "package:pharma_shop/components/form_error.dart";
-import "package:pharma_shop/components/no_account_text.dart";
-import "package:pharma_shop/constant.dart";
-import "package:pharma_shop/size_config.dart";
+import "package:Motorcycle_shop_app/components/custom_suffix_icon.dart";
+import "package:Motorcycle_shop_app/components/default_button.dart";
+import "package:Motorcycle_shop_app/components/form_error.dart";
+import "package:Motorcycle_shop_app/components/no_account_text.dart";
+import "package:Motorcycle_shop_app/constant.dart";
+import "package:Motorcycle_shop_app/size_config.dart";
 
 class Body extends StatelessWidget{
   @override

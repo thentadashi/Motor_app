@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
-import 'package:pharma_shop/screens/cart/cart_screen.dart';
-import 'package:pharma_shop/screens/home/components/icon_button_with_counter.dart';
-import 'package:pharma_shop/screens/home/components/search_field.dart';
-import 'package:pharma_shop/size_config.dart';
+import 'package:Motorcycle_shop_app/screens/cart/cart_screen.dart';
+import 'package:Motorcycle_shop_app/screens/home/components/icon_button_with_counter.dart';
+import 'package:Motorcycle_shop_app/screens/home/components/search_field.dart';
+import 'package:Motorcycle_shop_app/size_config.dart';
 
 class HomeHeader extends StatelessWidget {
   const HomeHeader({

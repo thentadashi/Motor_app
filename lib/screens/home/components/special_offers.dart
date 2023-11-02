@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:pharma_shop/screens/home/components/section_title.dart';
-import 'package:pharma_shop/size_config.dart';
+import 'package:Motorcycle_shop_app/screens/home/components/section_title.dart';
+import 'package:Motorcycle_shop_app/size_config.dart';
 
 class SpecialOffers extends StatelessWidget {
   const SpecialOffers({
@@ -12,7 +12,7 @@ class SpecialOffers extends StatelessWidget {
     return Column(
       children: [
         SectionTitle(
-            text:"Special for you",
+            text:"Special Offers",
             press: () {},
           ),
         SizedBox(height: getProportionateScreenWidth(30),),
@@ -21,15 +21,15 @@ class SpecialOffers extends StatelessWidget {
           child: Row(
             children: [
               SpecialOfferCard(
-                image: "assets/images/image_banner3.png",
-                category: "Vitamins",
-                numOfBrands: 30,
+                image: "assets/images/yamaha-nmax-155-alternatives-60efe70e9bde4.jpg",
+                category: "Yamaha Best Deals",
+                numOfBrands: "Nmax",
                 press: () {},
               ),
               SpecialOfferCard(
-                image: "assets/images/image_banner4.png",
-                category: "Antibiotics",
-                numOfBrands: 24,
+                image: "assets/images/PCX160-Photo-768x384.jpg",
+                category: "Honda Best Deals",
+                numOfBrands: "PCX160",
                 press: () {},
               ),
             ],
@@ -50,7 +50,7 @@ class SpecialOfferCard extends StatelessWidget {
   });
 
   final String category, image;
-  final int numOfBrands;
+  final String numOfBrands;
   final GestureTapCallback press;
 
   @override
@@ -94,7 +94,7 @@ class SpecialOfferCard extends StatelessWidget {
                         ),
                       ),
                       TextSpan(
-                        text: "$numOfBrands Brands"
+                        text: "$numOfBrands"
                       ),
                     ],
                   ),

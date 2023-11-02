@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
-import 'package:pharma_shop/models/cart.dart';
-import 'package:pharma_shop/screens/cart/components/cart_item_card.dart';
-import 'package:pharma_shop/size_config.dart';
+import 'package:Motorcycle_shop_app/models/cart.dart';
+import 'package:Motorcycle_shop_app/screens/cart/components/cart_item_card.dart';
+import 'package:Motorcycle_shop_app/size_config.dart';
 
 
 class Body extends StatefulWidget {

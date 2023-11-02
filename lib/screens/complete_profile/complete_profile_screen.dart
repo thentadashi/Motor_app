@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:pharma_shop/screens/complete_profile/components/body.dart';
+import 'package:Motorcycle_shop_app/screens/complete_profile/components/body.dart';
 
 class CompleteProfileScreen extends StatelessWidget {
   const CompleteProfileScreen({Key? key, required this.userId}) : super(key: key);

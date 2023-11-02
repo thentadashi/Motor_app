@@ -1,17 +1,17 @@
 
 import 'package:flutter/widgets.dart';
-import 'package:pharma_shop/screens/cart/cart_screen.dart';
-import 'package:pharma_shop/screens/complete_profile/complete_profile_screen.dart';
-import 'package:pharma_shop/screens/details/details_screen.dart';
-import 'package:pharma_shop/screens/forgot_password/forgot_password_screen.dart';
-import 'package:pharma_shop/screens/home/home_screen.dart';
-import 'package:pharma_shop/screens/login_success/login_sucess_screen.dart';
-import 'package:pharma_shop/screens/otp/otp_screen.dart';
-import 'package:pharma_shop/screens/profile/profile_screen.dart';
-import 'package:pharma_shop/screens/registration_success/registration_success_screen.dart';
-import 'package:pharma_shop/screens/sign_in/sign_in_screen.dart';
-import 'package:pharma_shop/screens/sign_up/sign_up_screen.dart';
-import 'package:pharma_shop/screens/splash/splash_screen.dart';
+import 'package:Motorcycle_shop_app/screens/cart/cart_screen.dart';
+import 'package:Motorcycle_shop_app/screens/complete_profile/complete_profile_screen.dart';
+import 'package:Motorcycle_shop_app/screens/details/details_screen.dart';
+import 'package:Motorcycle_shop_app/screens/forgot_password/forgot_password_screen.dart';
+import 'package:Motorcycle_shop_app/screens/home/home_screen.dart';
+import 'package:Motorcycle_shop_app/screens/login_success/login_sucess_screen.dart';
+import 'package:Motorcycle_shop_app/screens/otp/otp_screen.dart';
+import 'package:Motorcycle_shop_app/screens/profile/profile_screen.dart';
+import 'package:Motorcycle_shop_app/screens/registration_success/registration_success_screen.dart';
+import 'package:Motorcycle_shop_app/screens/sign_in/sign_in_screen.dart';
+import 'package:Motorcycle_shop_app/screens/sign_up/sign_up_screen.dart';
+import 'package:Motorcycle_shop_app/screens/splash/splash_screen.dart';
 
 final Map<String, WidgetBuilder> routes = {
   SplashScreen.routeName: (context) => SplashScreen(),

@@ -1,13 +1,13 @@
 // ignore_for_file: prefer_const_constructors, prefer_const_literals_to_create_immutables
 
 import 'package:flutter/material.dart';
-import 'package:pharma_shop/components/default_button.dart';
-import 'package:pharma_shop/models/product.dart';
-import 'package:pharma_shop/screens/details/components/color_dots.dart';
-import 'package:pharma_shop/screens/details/components/product_description.dart';
-import 'package:pharma_shop/screens/details/components/product_images.dart';
-import 'package:pharma_shop/screens/details/components/top_rounded_container.dart';
-import 'package:pharma_shop/size_config.dart';
+import 'package:Motorcycle_shop_app/components/default_button.dart';
+import 'package:Motorcycle_shop_app/models/product.dart';
+import 'package:Motorcycle_shop_app/screens/details/components/color_dots.dart';
+import 'package:Motorcycle_shop_app/screens/details/components/product_description.dart';
+import 'package:Motorcycle_shop_app/screens/details/components/product_images.dart';
+import 'package:Motorcycle_shop_app/screens/details/components/top_rounded_container.dart';
+import 'package:Motorcycle_shop_app/size_config.dart';
 
 class Body extends StatelessWidget {
  final Product product;
